@@ -1,0 +1,53 @@
+
+.iconMenu{
+  margin-top: -4px;
+  width:25px;
+  margin-left: -10px;
+}
+.spanMenu{
+  margin-top: -18px;
+  margin-left: 20px;
+}
+
+th button{
+  color: inherit;
+  font: inherit;
+}
+
+.badge1 {
+  position:relative;
+}
+.badge1[data-badge]:after {
+  content:attr(data-badge);
+  position:absolute;
+  top:5px;
+  right:21px;
+  font-size:.7em;
+  background:#d64635;
+  color:white;
+  width:18px;height:18px;
+  text-align:center;
+  line-height:18px;
+  border-radius:50%;
+  box-shadow:0 0 1px #333;
+}
+
+
+.ng-select.custom {
+  border:0px;
+  min-height: 0px;
+  border-radius: 0;
+}
+.ng-select.custom .ng-select-container  {
+  min-height: 0px;
+  border-radius: 0;
+}
+
+.ng-select.custom ::ng-deep .ng-select-container  {
+  min-height: 0px;
+  border-radius: 0;
+}
+
+#contents > table > tbody > tr > td.action-cell.sortable.renderable > div > ul > li{
+  cursor: pointer;
+}

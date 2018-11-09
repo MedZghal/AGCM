@@ -1,0 +1,212 @@
+<!-- Main Content -->
+<section class="content home">
+  <div class="block-header">
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-12">
+        <h2>Accueil
+          <small>
+            <span class="text-uppercase" >
+              Bienvenue
+              <span *ngIf="parametres.type === 'Medecin'"> DR. </span>
+              {{parametres.cabinetMedicalCollection['0'].prenomMedecin}} {{parametres.cabinetMedicalCollection['0'].nomMedecin}}
+              Dernier accès Le {{ date | moment :'LLL'}}
+            </span>
+          </small>
+        </h2>
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-12 text-right">
+
+
+        <ul class="breadcrumb float-md-right">
+          <li class="breadcrumb-item">
+            <a> <i class="zmdi zmdi-home"></i> MedPro </a>
+          </li>
+          <li class="breadcrumb-item active"> Le {{ date | moment :'LLLL'}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row clearfix">
+      <div class="col-lg-3 col-md-3">
+        <div class="card top-report">
+          <div class="body">
+
+            <h3 class="m-t-0"><img style="width:35px;" src="./assets/img/079-safebox.png" alt=""> 0,000 <i class="zmdi zmdi-trending-up float-right"></i></h3>
+            <p class="text-muted">Recette Pour Aujourd'hui</p>
+            <div class="progress">
+              <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="card top-report">
+          <div class="body">
+            <h3 class="m-t-0">
+              <img style="width:35px;" src="./assets/img/001-clock-1.png" alt=""> 160<i class="zmdi zmdi-trending-up float-right"></i></h3>
+            <p class="text-muted">Rendez-Vous</p>
+            <div class="progress">
+              <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="card top-report">
+          <div class="body">
+            <h3 class="m-t-0">
+              <img style="width:30px;" src="./assets/img/055-calendar-1.png" alt=""> 15 <i class="zmdi zmdi-trending-up float-right"></i></h3>
+            <p class="text-muted">Consultations</p>
+            <div class="progress">
+              <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="card top-report">
+          <div class="body">
+            <h3 class="m-t-0">
+              <img style="width:35px;" src="./assets/img/016-doctor-1.png" alt=""> 320 <i class="zmdi zmdi-trending-up float-right"></i></h3>
+            <p class="text-muted">Patients</p>
+            <div class="progress">
+              <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12">
+        <div class="row clearfix">
+          <div class="col-lg-12">
+            <div class="card">
+              <ul class="row profile_state list-unstyled" id="service_tab">
+                <li class="col-lg-3 col-md-3 col-6">
+                  <div class="body">
+                    <p><img style="width:35px;" src="./assets/img/service_block/tab/1-g.png" alt=""></p>
+                    <span class="text-uppercase"> Patient </span>
+                  </div>
+                </li>
+                <li class="col-lg-3 col-md-3 col-6">
+                  <div class="body">
+                    <p><img style="width:35px;" src="./assets/img/service_block/tab/2-g.png" alt=""></p>
+                    <span class="text-uppercase"> Consultation </span>
+                  </div>
+                </li>
+                <li class="col-lg-3 col-md-3 col-6">
+                  <div class="body">
+                    <p><img style="width:35px;" src="./assets/img/service_block/tab/3-g.png" alt=""></p>
+                    <span class="text-uppercase"> Archive </span>
+                  </div>
+                </li>
+                <li class="col-lg-3 col-md-3 col-6">
+                  <div class="body">
+                    <p><img style="width:35px;" src="./assets/img/service_block/tab/4-g.png" alt=""></p>
+                    <span class="text-uppercase">Rendez-Vous</span>
+                  </div>
+                </li>
+                <li class="col-lg-3 col-md-3 col-6">
+                  <div class="body">
+                    <p><img style="width:35px;" src="./assets/img/service_block/tab/5-g.png" alt=""></p>
+                    <span class="text-uppercase"> Paramétres </span>
+                  </div>
+                </li>
+                <li class="col-lg-3 col-md-3 col-6">
+                  <div class="body">
+                    <p><img style="width:35px;" src="./assets/img/service_block/tab/6-g.png" alt=""></p>
+                    <span class="text-uppercase"> Comptabilité </span>
+                  </div>
+                </li>
+                <li class="col-lg-3 col-md-3 col-6">
+                  <div class="body">
+                    <p><img style="width:35px;" src="./assets/img/service_block/tab/statistics.png" alt=""></p>
+                    <span class="text-uppercase"> Statistiques </span>
+                  </div>
+                </li>
+                <li class="col-lg-3 col-md-3 col-6">
+                  <div class="body">
+                    <p><img style="width:35px;" src="./assets/img/service_block/tab/medicines.png" alt=""></p>
+                    <span class="text-uppercase"> Pharmacie </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-sm-12 col-md-12 col-lg-12" >
+        <div class="card">
+          <div class="header">
+            <h2><strong>Services</strong> Support  </h2>
+            <ul class="header-dropdown">
+              <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                <ul class="dropdown-menu dropdown-menu-right slideUp">
+                  <li><a href="javascript:void(0);">Action</a></li>
+                  <li><a href="javascript:void(0);">Another action</a></li>
+                  <li><a href="javascript:void(0);">Something else</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style=" margin-top: -30px; margin-bottom: -20px; ">
+
+
+              <!-- Tab panes -->
+              <section class="col-md-12 col-sm-12 col-lg-12 row quick_blocks_row quick_blocks_row_home2 ">
+
+
+                <div class="cc-main home-panel">
+                  <div class="home-section-container home-how-container home-max-width" id="how">
+                    <ul class="home-how-step-ul">
+
+                      <li class="col-sm-4">
+                        <div class="home-how-step-inner">
+                          <div> <img style="width:150px; " src="./assets/img/anim-ressources-bleu.gif" alt=""></div>
+                          <p class="home-how-step-title"> Support </p>
+                          <p class="home-how-step-desc">Bénéficiez en tout lieu et à toute heure d’une assistance technique et fonctionnelle.</p>
+                        </div>
+                      </li>
+
+                      <li class="col-sm-4">
+                        <div class="home-how-step-inner">
+                          <div> <img style="width:150px; " src="./assets/img/anim-services-bleu.gif" alt=""></div>
+                          <p class="home-how-step-title"> Services </p>
+                          <p class="home-how-step-desc">Offrez-vous une nouvelle expérience utilisateur ,Une expérience de navigation nouvelle, une logique d’utilisation moderne et un usage adapté au tactile.</p>
+                        </div>
+                      </li>
+
+
+
+                      <li class="col-sm-4">
+                        <div class="home-how-step-inner">
+                          <div>
+
+                            <a id="downloadlite">
+                              <img id="Library" class="image" style="width:70px; margin-right: 5px; " src="./assets/img/Mymedapplite.png" alt="">
+                            </a>
+
+                            <a id="download">
+                              <img id="Libraryv" class="image" style="width:70px; " src="./assets/img/MyLogoV2.png" alt="">
+                            </a>
+
+                          </div>
+                          <p class="home-how-step-title"><span>Med Pro App</span> <small style=" font-size: 15px; "> (<a>ANDROID</a>,<a>IOS</a>,<a>WindowsM</a>)</small></p>
+                          <p class="home-how-step-desc">Une application mobile pour gérer le flux de demandes des patients en fonction de leur urgence, enregistrer des images et des comptes rendus sans quitter la table d’examen</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>

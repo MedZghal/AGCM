@@ -1,0 +1,46 @@
+<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" style="display: none;min-width: 900px;" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="title" id="largeModalLabel">Ajouter une Nouvelle Consultation</h4>
+      </div>
+      <form  class="form"  [formGroup]="registerForm"  (ngSubmit)="onSubmit()" >
+        <div class="modal-body">
+          <h5> Liste des patients :</h5>
+
+
+            <ng-select class="custom"
+                       formControlName="patientSelect"
+                       [items]="patients"
+                     bindLabel="item.numFichPatient"
+                     [searchFn]="customSearchFn"
+                     [loading]="consultsLoading"
+                     placeholder="Sélectionnez le patient ou tapez ID ou le nom du patient"
+
+                     [(ngModel)]="selectedPersonId">
+            <ng-template  ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
+              <div>
+                <div>
+                  <p class="card-text" style="width: 100px">
+                    <img height="50" width="50" [src]="item.img"/>
+                  </p>
+                  <div style="margin-top: -65px; margin-left: 55px;">
+                    <h5 class="card-title" [ngOptionHighlight]="search">{{item.item.numFichPatient}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted" [ngOptionHighlight]="search">{{item.item.prenom }} {{item.item.nom}} </h6>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+
+          </ng-select>
+
+        </div>
+        <div class="modal-footer">
+
+        <button type="submit" [disabled]="!registerForm.valid"  class="btn btn-primary btn-round waves-effect"  >Nouvelle Consultation</button>
+        <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Annuler</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

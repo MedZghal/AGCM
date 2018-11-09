@@ -1,0 +1,15 @@
+/*
+  backgrid-moment-cell
+  http://github.com/wyuenho/backgrid
+
+  Copyright (c) 2013-present Cloudflare, Inc and contributors
+  Licensed under the MIT @license.
+*/
+
+.backgrid .moment-cell {
+  text-align: center;
+}
+
+.backgrid .moment-cell.editor input[type=text] {
+  text-align: center;
+}

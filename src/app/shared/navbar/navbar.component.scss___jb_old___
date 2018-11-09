@@ -1,0 +1,6 @@
+
+.logoMedPro{
+  margin-left: 5px;
+  -webkit-filter: hue-rotate(80deg);
+  filter: hue-rotate(80deg);
+}

@@ -1,0 +1,73 @@
+
+<div class="page-header">
+  <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="timer" >
+    <p style="font-size: 20px; color: white">Chargement ...</p>
+  </ngx-spinner>
+
+  <div class="page-header-image" style="background-image:url(./assets/images/background.jpg)"></div>
+<div class="container">
+
+
+    <div class="col-md-12 content-center">
+        <div class="card-plain">
+            <form  class="form" [formGroup]="registerForm" (ngSubmit)="loginUser()">
+                <div class="header">
+                    <div style="margin-bottom: 10px;">
+                      <img src="./assets/images/logo_mymedapptxtCq.png"  alt="MedPro" style="margin-left: -25px; width: 400px; max-width: 200%;">
+                    </div>
+                    <h5> SE CONNECTER </h5>
+                </div>
+                <div class="content">
+
+                    <div class="input-group form-float input-lg">
+                        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="Enter User Name">
+                        <span class="input-group-addon">
+                            <i class="zmdi zmdi-account-circle"></i>
+                        </span>
+
+                    </div>
+                          <div *ngIf="submitted && f.username.errors" style="color: red;" class="help-info">
+                            <div *ngIf="f.username.errors.required">Last Name is required</div>
+                          </div>
+
+                    <div class="input-group form-float input-lg">
+                        <input type="password" placeholder="Password" class="form-control" formControlName="pass" [ngClass]="{ 'is-invalid': submitted && f.pass.errors }"  />
+                        <span class="input-group-addon">
+                            <i class="zmdi zmdi-lock"></i>
+                        </span>
+                    </div>
+                          <div *ngIf="submitted && f.pass.errors" style="color: red;" class="help-info">
+                            <div *ngIf="f.pass.errors.required">Password is required</div>
+                            <div *ngIf="f.pass.errors.minlength">Password must be at least 6 characters</div>
+                          </div>
+
+                </div>
+                <div class="form-group footer text-center">
+                    <button  class="btn btn-primary btn-round btn-lg btn-block ">Connexion</button >
+                    <h5><a  class="link">Mot de passe oublié?</a></h5>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="https://medproapp.ddns.net/" target="_blank">Contactez nous</a></li>
+                <li><a href="https://medproapp.ddns.net/" target="_blank">À propos de nous</a></li>
+                <li><a href="javascript:void(0);">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            &copy;{{year}} ,
+            <span> Copyright <a href="https://medproapp.ddns.net/" target="_blank">ProSys</a></span>
+        </div>
+    </div>
+</footer>
+</div>
